@@ -1,0 +1,22 @@
+
+Pythond 的函数是由一个新的语句编写，即def，def是可
+
+执行的语句--函数并不存在，直到Python运行了def后才存
+
+在。函数是通过赋值传递的，参数通过赋值传递给函数def
+
+语句将创建一个函数对象并将其赋值给一个变量名，def语
+
+句的一般格式如下：
+
+
+def function_name(arg1,arg2[,...]):
+
+    statement
+    
+[return value]  
+
+
+返回值不是必须的，如果没有return语句，则Python默认
+
+返回值None。    

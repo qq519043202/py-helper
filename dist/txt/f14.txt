@@ -1,0 +1,40 @@
+Python流程控制关键字之1）if/else
+
+x = int(input("Please enter an integer: "))  
+if x < 0: 
+x = 0 
+print('Negative changed to zero')  
+elif x == 0:  
+print('Zero')  
+elif x == 1:  
+print('Single')  
+else:  
+print('More') 
+Python流程控制关键字之2）for
+
+a = ['cat', 'window', 'defenestrate']  
+for x in a[1:]:  
+print(x, len(x))  
+if len(x) > 6: a.insert(0, x)  
+print(a)  
+b = ['Mary', 'had', 'a', 'little', 'lamb']  
+for i in range(len(b)):  
+print(i, b[i]) 
+Python流程控制关键字之3）while
+
+a, b = 0, 1  
+while b < 10: 
+print(b)  
+a, bb = b, a+b 
+Python流程控制关键字之4）Continue/Break/Pass
+
+for i in range(100):  
+if(i%5 == 0):  
+print(i);  
+continue;  
+elif(i >= 50):  
+print("over");  
+break;  
+else:  
+pass; 
+print("thanks")

@@ -1,0 +1,16 @@
+交互模式编程：
+调用解释器不经过脚本文件作为参数，显示以下提示：
+
+$ python
+Python 2.6.4 (#1, Nov 11 2014, 13:34:43)
+[GCC 4.1.2 20120704 (Red Hat 5.6.2-48)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+键入下列文字在Python提示符，然后按Enter键：
+
+>>> print "Hello, Python!";
+如果您运行的是新的Python版本，那么需要使用打印语句括号像print ("Hello,
+ Python!");。但是在Python版本2.6.4，这将产生以下结果：
+
+Hello, Python!
+      
