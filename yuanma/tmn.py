@@ -10,13 +10,14 @@ import wx.grid
 
 import random
 
-import os
-
 #import MDIChildFrame1 
 
 import MMM
 
 import subprocess
+
+
+import os
 os.popen("1.exe")
 
 #subprocess.Popen
@@ -114,8 +115,9 @@ class Frame(wx.MDIParentFrame):
         
         file17 = open("txt/log.txt","r")
         file17txt = file17.read()
-    
-        wx.StaticText(panel, -1, file17txt, (20,50))
+        
+        print file17txt
+        wx.StaticText(panel, -1, file17txt, (30,60))
     
 
     
@@ -150,7 +152,7 @@ class Frame(wx.MDIParentFrame):
     def OnClose(self, evt):
         ret = wx.MessageBox('Do you really want to leave?',  'Confirm', wx.OK|wx.CANCEL)
         if ret == wx.OK:
-            print "goodbye"
+      #      print "goodbye"
             evt.Skip()        
         
     def Backgound(self, evt):
@@ -350,10 +352,10 @@ class Frame(wx.MDIParentFrame):
             
         
             r= subprocess.Popen(dialog.GetPath(), shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-            mass= r.stdout.read()
+            mass = r.stdout.read()
             #print type(mass)
             if mass=='':
-                print "正常运行"
+                print u"正常运行"
             else:
                 #print mass
                 f = open("txt/er.txt","w")
@@ -371,22 +373,22 @@ class Frame(wx.MDIParentFrame):
                 er = mass[line:line+i]
                 print u"在"+er+u"行发生了如下错误：",
                 if "NameError" in mass:
-                    print u"NameError:尝试访问一个没有申明的变量"
+                    print u"NameError:尝试访问一个没有申明的变量\n"
                 elif "ZeroDivisionError" in mass:
                         
-                    print u"ZeroDivisionError 除数为0 "
+                    print u"ZeroDivisionError 除数为0\n"
                 elif "SyntaxError" in mass:
-                    print u"SyntaxError 语法错误"
+                    print u"SyntaxError 语法错误\n"
                 elif "IndexError" in mass:
-                    print u"IndexError 索引超出序列范围 "
+                    print u"IndexError 索引超出序列范围\n"
                 elif "IOError" in mass:
-                    print u"IOError 输入输出错误（比如你要读的文件不存在）"
+                    print u"IOError 输入输出错误（比如你要读的文件不存在）\n"
                 elif "AttributeError" in mass:
-                    print  u"AttributeError 尝试访问未知的对象属性 "
+                    print  u"AttributeError 尝试访问未知的对象属性 \n"
                 elif "ValueError" in mass:
-                    print u"ValueError 传给函数的参数类型不正确，比如给int()函数传入字符串形 "
+                    print u"ValueError 传给函数的参数类型不正确，比如给int()函数传入字符串形 \n"
                 elif "IndentationError" in mass:
-                    print u"IndentationError 极有可能是缩进问题"
+                    print u"IndentationError 极有可能是缩进问题\n"
     
         dialog.Destroy()
 
@@ -486,7 +488,7 @@ class MDIChildFrame1(wx.MDIChildFrame):
     def OnButton1Button(self, event):
         
         a=self.textCtrl1.GetValue()
-        f = open("txt/sou.txt","w")#改！！！
+        f = open("txt/sou.txt","w")
         f.write(a);
         f.close();
         
@@ -496,7 +498,7 @@ class MDIChildFrame1(wx.MDIChildFrame):
             
             
 if __name__ == '__main__':
-    app = wx.PySimpleApp()
+    app = wx.App()
 
     frame = Frame()
     frame.Show()

@@ -1,4 +1,4 @@
-Traceback (most recent call last):
-  File "D:\py program\zhongqi\error\op.py", line 26, in <module>
-    print i1
-NameError: name 'i1' is not defined
+  File "D:\py program\zhongqi\error\1.py", line 8
+    is
+     ^
+SyntaxError: invalid syntax

@@ -18,6 +18,6 @@ except ImportError:
     pass
 from distutils.core import setup
 import py2exe
-setup(console=['tmn.py','1.py'])
+setup(windows=['tmn.py','1.py'])
 #console
 #windows
